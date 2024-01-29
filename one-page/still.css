@@ -1,0 +1,173 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Zen+Dots&display=swap');
+
+
+*{box-sizing: border-box;} /* hepsini border box yapar * koymak */
+
+html,body{padding: 0; margin: 0;        /*sayfa full kenarlara yapışması için 0 verdik */
+scroll-behavior: smooth;               /* yumuşak iniş için */
+font-family: 'Roboto Condensed', sans-serif;
+
+} 
+
+.container-fluid{
+    width: 100%;
+    min-height: 800px;
+    
+}
+
+.row{width: 100%;}
+
+.col12{width: calc( (12/12) * 100% );}
+.col8{width: calc( (8/12) * 100% );}
+.col6{width: calc( (6/12) * 100% );}
+.col4{width: calc( (4/12) * 100% );}
+.col3{width: calc( (3/12) * 100% );}
+
+
+.ytam{
+    height: 100vh;
+}
+
+.bg-primary{background-color: #999393;}
+.bg-danger{background-color: #795f5f;}
+.bg-info{background-color: cadetblue;}
+.bg-success{background-color: #6f886f;}
+.bg-warning{background-color: #3e4a66;}
+.bg-black{background-color: rgba(0, 0, 0, 0.973);}
+
+#divBanner{
+    background-image: url("resimler/mercedes-benz-amg-gt-4k-2020-qd.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed; /* sayfada resmin sabit kalmasını sağlar */
+    justify-content:center;   /* dikeyde ortala */
+    align-items:center; /*yatayda ortala */
+    flex-direction: column;
+}
+
+.flexyap{
+    display: flex;       /* float left ile aynı mantıkta yazılar yana gelir */
+}
+nav{background-color: rgba(0, 0, 0, 0.2); /* 0.2 saydamlık verir */
+    padding: 1rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.459); /* gölge verir */
+    transition: all 0.7s;
+    position: fixed; /* menü sabit kalsın */
+    top:0px  /* top:0px  heryere sabitler istediğin px verdiğinde */    /* bottom: 0px;  aşağı sabitler */
+   
+}
+
+nav ul{list-style: none; /* listelerdekii noktaları siler */ 
+         justify-content: flex-end;         } 
+
+nav ul li {
+    width: 120px;
+}
+nav ul li a{
+
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+}
+#divLogo{
+    align-items: center; /* dikeyde hizalar */
+    font-size: 2.5rem;
+    color: #888076b0;
+    font-family: 'Kanit', sans-serif;
+}
+#divBanner span{
+    font-size: 2.5rem;
+    color: #ada297cc;
+    text-shadow: 0px 0px 10px black; /* yazıya gölge verir */    
+}
+
+.baslik{
+    margin-top: 5rem;
+    text-align: center;
+    color: rgba(207, 192, 174, 0.678);
+    text-shadow: 0px 0px 5px rgb(32, 32, 32);
+}
+#divModeller>div{
+    float: left;
+}
+#divModeller .col4 {  /* div modellerin altındaki col4 lere ulaşmak için yazılır. */
+    height: 40rem;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgba(201, 191, 187, 0.678);
+    font-family: 'Kanit', sans-serif;
+    text-shadow: 0px 0px 10px rgb(32, 32, 32);
+    border:5px solid rgb(0, 0, 0)
+}
+#Modelb1{
+    background-image: url("resimler/blllk.jpg");  
+}
+#Modelb2{
+    background-image: url("resimler/amg50ed5.jpg");
+}
+#Modelb3{
+    background-image: url("resimler/kkkskskskskd.jpg");
+}
+
+.floatyap{
+    float: left;
+}
+
+#divHakkimizda .col6{
+    height: 30rem;
+}
+
+#hakbilgi{
+    padding: 2rem ;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 1rem;   
+}
+.text-white{color: rgba(255, 255, 255, 0.685);}
+
+#divIletisim .col6{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+#divIletisim .col12{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+
+#basadon{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(37, 37, 36, 0.308);
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#perde{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: none;
+}
